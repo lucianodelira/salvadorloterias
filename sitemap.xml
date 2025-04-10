@@ -1,6 +1,24 @@
-<?xml version='1.0' encoding='utf-8'?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url><loc>https://app.salvadorloterias.com/</loc><lastmod>2025-04-10</lastmod><changefreq>daily</changefreq><priority>1.0</priority></url><url><loc>https://app.salvadorloterias.com/sobre</loc><lastmod>2025-04-01</lastmod><changefreq>monthly</changefreq><priority>0.8</priority></url><url><loc>https://app.salvadorloterias.com/contato</loc><lastmod>2025-03-20</lastmod><changefreq>monthly</changefreq><priority>0.7</priority></url></urlset>
-    <url>
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://app.salvadorloterias.com/</loc>
+    <lastmod>2025-04-10</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://app.salvadorloterias.com/sobre</loc>
+    <lastmod>2025-04-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://app.salvadorloterias.com/contato</loc>
+    <lastmod>2025-03-20</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://app.salvadorloterias.com/resultado</loc>
     <lastmod>2025-04-09</lastmod>
     <changefreq>daily</changefreq>
@@ -54,6 +72,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
+  <!-- continue listando os outros <url> normalmente, sempre dentro do <urlset> -->
   <url>
     <loc>https://app.salvadorloterias.com/quina</loc>
     <lastmod>2025-04-07</lastmod>
@@ -66,62 +85,7 @@
     <changefreq>weekly</changefreq>
     <priority>0.85</priority>
   </url>
-  <url>
-    <loc>https://app.salvadorloterias.com/loteria-federal</loc>
-    <lastmod>2025-04-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.85</priority>
-  </url>
-  <url>
-    <loc>https://app.salvadorloterias.com/dupla-sena</loc>
-    <lastmod>2025-04-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://app.salvadorloterias.com/timemania</loc>
-    <lastmod>2025-04-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://app.salvadorloterias.com/lotomania</loc>
-    <lastmod>2025-04-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://app.salvadorloterias.com/super-sete</loc>
-    <lastmod>2025-04-06</lastmod>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
-    <loc>https://app.salvadorloterias.com/resultados-anteriores</loc>
-    <lastmod>2025-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://app.salvadorloterias.com/premiacoes</loc>
-    <lastmod>2025-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.75</priority>
-  </url>
-  <url>
-    <loc>https://app.salvadorloterias.com/regulamento</loc>
-    <lastmod>2025-04-01</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.6</priority>
-  </url>
-  <url>
-    <loc>https://app.salvadorloterias.com/faq</loc>
-    <lastmod>2025-04-01</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-
-<url><loc>https://app.salvadorloterias.com/resultados-mega-sena</loc><lastmod>2025-04-10</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
+  <url><loc>https://app.salvadorloterias.com/resultados-mega-sena</loc><lastmod>2025-04-10</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://app.salvadorloterias.com/palpites-do-dia</loc><lastmod>2025-04-10</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://app.salvadorloterias.com/estatisticas-loteria</loc><lastmod>2025-04-10</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://app.salvadorloterias.com/bicho-do-dia</loc><lastmod>2025-04-10</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
@@ -176,4 +140,6 @@
   <url><loc>https://app.salvadorloterias.com/bolao-megasena</loc><lastmod>2025-03-20</lastmod><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://app.salvadorloterias.com/jogos-automaticos</loc><lastmod>2025-03-19</lastmod><changefreq>weekly</changefreq><priority>0.6</priority></url>
   <url><loc>https://app.salvadorloterias.com/sorteios-especiais</loc><lastmod>2025-03-19</lastmod><changefreq>monthly</changefreq><priority>0.6</priority></url>
+</urlset>
+
 

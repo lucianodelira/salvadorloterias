@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
@@ -70,6 +71,7 @@
       width: 100%;
       height: 100%;
       border: none;
+      loading: lazy;
     }
 
     .buttons {
@@ -134,62 +136,79 @@
       border-radius: 5px;
       cursor: pointer;
     }
+
+    #install-banner {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background: #111;
+      color: #fff;
+      padding: 16px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+      z-index: 9999;
+      text-align: center;
+    }
+
+    #install-banner button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
   </style>
 </head>
+
 <body>
 
   <div class="container">
     <div class="iframe-container">
-      <iframe allow='clipboard-read; clipboard-write' frameborder='0' height='95%' id='embeddedIframe' loading='lazy' sandbox='allow-scripts allow-same-origin' src='https://app.paraisoloterias.com.br/pr/wBHQUmZE' title='Conteúdo interativo do Acertos Club' width='100%'></iframe>
+      <iframe allow="clipboard-read clipboard-write" frameborder="0" height="95%" id="embeddedIframe" sandbox="allow-scripts allow-same-origin" src="https://app.paraisoloterias.com.br/pr/wBHQUmZE" title="Conteúdo interativo do Acertos Club" width="100%"></iframe>
     </div>
 
     <div class="buttons">
-      <a class="button" href="https://github.com/lucianodelira/app.acertos.club/raw/f389362c4a226e7a4d56f474d1346e8ce3ad50d4/ACERTOSCLUB.apk">📲 .APK</a>
-      <a class="button banca" href="https://www.acertosclub.com" target="_blank" rel="noopener">
-        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhrejyS8jFb4iA7-shAFfeWG9d-r8vleMloL60vXIZRaps3j1ZjjtAaDpkryhG0pLdy8Q4W-Bny1G5fDAxGuKDRXs-ytlypuBQ9UGsrXDD14QMORXBDbO1zkJ9OcbKh7n7YDp-ZunghfP3q4ucZFN62kLPA149uRiIWw8xy0uDuq_Xg6xS_9hZTBCMFh3sb/s320/IMG-20240927-WA0455__2_-removebg-removebg-preview%20(1).png" alt="Parceiro" />
+      <a class="button" href="https://github.com/lucianodelira/app.acertos.club/raw/f389362c4a226e7a4d56f474d1346e8ce3ad50d4/ACERTOSCLUB.apk" aria-label="Baixar APK">📲 .APK</a>
+      <a class="button banca" href="https://www.acertosclub.com" target="_blank" rel="noopener noreferrer" aria-label="Ir para a Banca">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhrejyS8jFb4iA7-shAFfeWG9d-r8vleMloL60vXIZRaps3j1ZjjtAaDpkryhG0pLdy8Q4W-Bny1G5fDAxGuKDRXs-ytlypuBQ9UGsrXDD14QMORXBDbO1zkJ9OcbKh7n7YDp-ZunghfP3q4ucZFN62kLPA149uRiIWw8xy0uDuq_Xg6xS_9hZTBCMFh3sb/s320/IMG-20240927-WA0455__2_-removebg-removebg-preview%20(1).png" alt="Logo Parceiro" />
         Parceiro
       </a>
-      <a class="button tutorial" href="https://www.salvadorloterias.com" target="_blank" rel="noopener">📘 Tutorial</a>
-      <a class="button" style="background: #004d00;" href="https://wa.me/5583993209139?text=Ol%C3%A1%20Salvador%20Loterias%2C%20preciso%20de%20ajuda%20!" target="_blank" rel="noopener">💬 Suporte</a>
+      <a class="button tutorial" href="https://www.salvadorloterias.com" target="_blank" rel="noopener noreferrer" aria-label="Ir para o Tutorial">📘 Tutorial</a>
+      <a class="button" style="background: #004d00;" href="https://wa.me/5583993209139?text=Ol%C3%A1%20Salvador%20Loterias%2C%20preciso%20de%20ajuda%20!" target="_blank" rel="noopener noreferrer" aria-label="Suporte via WhatsApp">💬 Suporte</a>
     </div>
   </div>
 
-  <!-- Notificação dentro de iframe -->
   <div id="notificacao-pod">
     Ativar notificações?
     <br />
     <button onclick="ativarPermissao()">Ativar Permissão</button>
   </div>
 
-  <!-- Banner de instalação PWA -->
-  <div id="install-banner" style="display:none; position: fixed; bottom: 20px; left: 20px; right: 20px; background: #111; color: #fff; padding: 16px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.6); z-index: 9999; text-align: center;">
+  <div id="install-banner">
     <p style="margin: 0 0 10px;">📲 Instale nosso app para acesso mais rápido e fácil!</p>
-    <button onclick="instalarApp()" style="background: #4CAF50; color: white; border: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; cursor: pointer;">Instalar App</button>
+    <button onclick="instalarApp()">Instalar App</button>
   </div>
 
   <script>
-    // Redirecionamento para HTTPS correto
     if (window.location.hostname === "salvadorloterias.com") {
       window.location.replace("https://www.salvadorloterias.com");
     }
 
-    // Notificação de iframe
     if (window.top !== window.self) {
       document.getElementById("notificacao-pod").style.display = "block";
     }
 
     function ativarPermissao() {
-      const link = window.location.href;
-      window.open(link, "_blank");
+      window.open(window.location.href, "_blank");
     }
 
-    // Instalação do PWA
     let deferredPrompt;
-
     if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('service-worker.js')
-        .then(reg => console.log('[SW] Registrado com sucesso!', reg))
-        .catch(err => console.error('[SW] Erro ao registrar:', err));
+      navigator.serviceWorker.register('service-worker.js').then(reg => console.log('[SW] Registrado com sucesso!', reg)).catch(err => console.error('[SW] Erro ao registrar:', err));
     }
 
     window.addEventListener('beforeinstallprompt', (e) => {
@@ -203,16 +222,18 @@
     function instalarApp() {
       if (deferredPrompt) {
         deferredPrompt.prompt();
-        deferredPrompt.userChoice.then(choiceResult => {
+        deferredPrompt.userChoice.then((choiceResult) => {
           if (choiceResult.outcome === 'accepted') {
+            console.log('Usuário aceitou o prompt de instalação');
             localStorage.setItem('appInstalado', 'true');
             document.getElementById('install-banner').style.display = 'none';
+          } else {
+            console.log('Usuário rejeitou o prompt de instalação');
           }
         });
       }
     }
   </script>
-
 </body>
-</html>
 
+</html>

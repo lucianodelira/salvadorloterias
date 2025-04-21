@@ -1,6 +1,24 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
+
+ <script>
+  // Verifica se o navegador suporta notificações
+  if ("Notification" in window) {
+    // Verifica se está fora de um iframe (top-level)
+    if (window.top === window.self) {
+      // Solicita permissão de forma segura
+      Notification.requestPermission().then(function(permission) {
+        console.log("Permissão para notificações:", permission);
+      });
+    } else {
+      console.warn("Notificações não solicitadas: página está dentro de um iframe (bloqueado por segurança).");
+    }
+  } else {
+    console.warn("API de Notificações não suportada neste navegador.");
+  }
+</script>
+
  <!-- Segurança e boas práticas -->
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />

@@ -1,71 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-  <meta name="referrer" content="no-referrer-when-downgrade" />
-  <meta name="referrer" content="no-referrer" />
-  <meta name="permissions-policy" content="camera=(), microphone=(), geolocation=()" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: blob:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; frame-src *; connect-src *;" />
+<!-- Viewport para dispositivos móveis -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
 
-  <style>
+<!-- Fonte base legível para mobile -->
+<style>
+  body {
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+
+  @media (max-width: 480px) {
     body {
-      font-size: 16px;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
+      font-size: 14px;
     }
+  }
 
-    @media (max-width: 480px) {
-      body {
-        font-size: 14px;
-      }
-    }
+  
 
-    #notificacao-pod {
-      position: fixed;
-      bottom: 20px;
-      right: 20px;
-      background: #222;
-      color: #fff;
-      padding: 15px 20px;
-      border-radius: 12px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.3);
-      font-family: sans-serif;
-      z-index: 9999;
-      display: none;
-    }
-    #notificacao-pod button {
-      margin-top: 10px;
-      background: #4CAF50;
-      color: white;
-      border: none;
-      padding: 8px 12px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
-  </style>
-</head>
-<body>
+  #notificacao-pod {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #222;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    font-family: sans-serif;
+    z-index: 9999;
+    display: none;
+  }
+  #notificacao-pod button {
+    margin-top: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
 
-  <!-- Pop-up para ativar permissão -->
-  <div id="notificacao-pod">
-    Ativar notificações?
-    <br />
-    <button onclick="ativarPermissao()">Ativar Permissão</button>
-  </div>
+<div id="notificacao-pod">
+  Ativar notificações?
+  <br />
+  <button onclick="ativarPermissao()">Ativar Permissão</button>
+</div>
 
-  <script>
-    // Exibe o pod se estiver dentro de iframe
-    if (window.top !== window.self) {
-      document.getElementById("notificacao-pod").style.display = "block";
-    }
 
-    function ativarPermissao() {
-      // Abre o site fora do iframe (top-level)
-      const link = window.location.href;
-      window.open(link, "_blank");
-    }
-  </script>
 
 
  <!-- Segurança e boas práticas -->
@@ -226,5 +211,22 @@
       }
     }
   </script>
+
+
+<script>
+  // Exibe o pod se estiver dentro de iframe
+  if (window.top !== window.self) {
+    document.getElementById("notificacao-pod").style.display = "block";
+  }
+
+  function ativarPermissao() {
+    // Abre o site fora do iframe (top-level)
+    const link = window.location.href;
+    window.open(link, "_blank");
+  }
+</script>
+
+
+  
 </body>
 </html>

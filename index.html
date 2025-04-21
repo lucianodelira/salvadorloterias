@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
   <meta name="referrer" content="no-referrer" />
   <meta name="permissions-policy" content="camera=(), microphone=(), geolocation=()" />
   <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: blob:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; frame-src *; connect-src *;" />
-
   <title>Salvador Loterias - A Banca de Apostas Mais Confiável e Rentável</title>
   <meta name="description" content="A Salvador Loterias é a melhor plataforma de apostas com segurança, pagamentos instantâneos via Pix e suporte 24/7. Jogue e multiplique seus ganhos!" />
   <meta name="keywords" content="salvador loterias, banca de apostas, apostas online, pix imediato, suporte 24h, cassino, futebol, esportes, palpites, ganhar dinheiro" />
@@ -20,20 +20,154 @@
   <meta property="og:url" content="https://www.salvadorloterias.com" />
   <meta property="og:type" content="website" />
 
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Salvador Loterias - A Banca de Apostas Mais Confiável e Rentável" />
+  <meta name="twitter:description" content="Aposte com segurança e receba via Pix na hora. Acesse agora a Salvador Loterias!" />
+  <meta name="twitter:image" content="https://trivo-assets.pages.dev/images/paraiso2.png" />
+
   <!-- Favicon -->
   <link rel="icon" href="https://trivo-assets.pages.dev/images/paraiso2.png" type="image/png">
   <link rel="shortcut icon" href="https://trivo-assets.pages.dev/images/paraiso2.png" type="image/png">
   <link rel="manifest" href="manifest.json" />
   <link rel="canonical" href="https://www.salvadorloterias.com" />
 
-  <!-- Critical CSS inline -->
   <style>
-    /* Código CSS crítico aqui */
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    body {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        font-size: 14px;
+      }
+    }
+
+    .container {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      width: 100%;
+    }
+
+    .iframe-container {
+      flex: 1;
+      width: 100%;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      loading: lazy;
+      async;
+    }
+
+    .buttons {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 5px;
+      padding: 5px;
+      background: #000;
+    }
+
+    .button {
+      background: #006400;
+      color: white;
+      padding: 5px 8px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: bold;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      transition: background 0.3s ease;
+    }
+
+    .button:hover {
+      background: #00a000;
+    }
+
+    .button.banca { background: #000080; }
+    .button.banca:hover { background: #0000cd; }
+
+    .button.tutorial { background: #673AB7; }
+    .button.tutorial:hover { background: #7e57c2; }
+
+    .button img {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+    }
+
+    #notificacao-pod {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #222;
+      color: #fff;
+      padding: 15px 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 9999;
+      display: none;
+    }
+
+    #notificacao-pod button {
+      margin-top: 10px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #install-banner {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      left: 20px;
+      right: 20px;
+      background: #111;
+      color: #fff;
+      padding: 16px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.6);
+      z-index: 9999;
+      text-align: center;
+    }
+
+    #install-banner button {
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 6px;
+      font-weight: bold;
+      cursor: pointer;
+    }
   </style>
 
-  <!-- Async and Defer JavaScript -->
-  <script src="seu-script.js" defer></script>
-
+  <!-- Preload important assets to speed up rendering -->
+  <link rel="preload" href="https://trivo-assets.pages.dev/images/paraiso2.png" as="image">
+  <link rel="preload" href="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhrejyS8jFb4iA7-shAFfeWG9d-r8vleMloL60vXIZRaps3j1ZjjtAaDpkryhG0pLdy8Q4W-Bny1G5fDAxGuKDRXs-ytlypuBQ9UGsrXDD14QMORXBDbO1zkJ9OcbKh7n7YDp-ZunghfP3q4ucZFN62kLPA149uRiIWw8xy0uDuq_Xg6xS_9hZTBCMFh3sb/s320/IMG-20240927-WA0455__2_-removebg-removebg-preview%20(1).png" as="image">
 </head>
 
 <body>
@@ -43,16 +177,17 @@
      <iframe allow='clipboard-read; clipboard-write' frameborder='0' height='95%' id='embeddedIframe' loading='lazy' sandbox='allow-scripts allow-same-origin' src='https://app.paraisoloterias.com.br/pr/wBHQUmZE' title='Conteúdo interativo do Acertos Club' width='100%'></iframe>
     </div>
 
-    <!-- Buttons and Notifications -->
     <div class="buttons">
       <a class="button" href="https://github.com/lucianodelira/app.acertos.club/raw/f389362c4a226e7a4d56f474d1346e8ce3ad50d4/ACERTOSCLUB.apk" aria-label="Baixar APK">📲 .APK</a>
-      <a class="button banca" href="https://www.acertosclub.com" target="_blank" rel="noopener noreferrer" aria-label="Ir para a Banca">Parceiro</a>
+      <a class="button banca" href="https://www.acertosclub.com" target="_blank" rel="noopener noreferrer" aria-label="Ir para a Banca">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhrejyS8jFb4iA7-shAFfeWG9d-r8vleMloL60vXIZRaps3j1ZjjtAaDpkryhG0pLdy8Q4W-Bny1G5fDAxGuKDRXs-ytlypuBQ9UGsrXDD14QMORXBDbO1zkJ9OcbKh7n7YDp-ZunghfP3q4ucZFN62kLPA149uRiIWw8xy0uDuq_Xg6xS_9hZTBCMFh3sb/s320/IMG-20240927-WA0455__2_-removebg-removebg-preview%20(1).png" alt="Logo Parceiro" />
+        Parceiro
+      </a>
       <a class="button tutorial" href="https://www.salvadorloterias.com" target="_blank" rel="noopener noreferrer" aria-label="Ir para o Tutorial">📘 Tutorial</a>
       <a class="button" style="background: #004d00;" href="https://wa.me/5583993209139?text=Ol%C3%A1%20Salvador%20Loterias%2C%20preciso%20de%20ajuda%20!" target="_blank" rel="noopener noreferrer" aria-label="Suporte via WhatsApp">💬 Suporte</a>
     </div>
   </div>
 
-  <!-- Notifications -->
   <div id="notificacao-pod">
     Ativar notificações?
     <br />
@@ -60,14 +195,51 @@
   </div>
 
   <div id="install-banner">
-    <p>📲 Instale nosso app para acesso mais rápido e fácil!</p>
+    <p style="margin: 0 0 10px;">📲 Instale nosso app para acesso mais rápido e fácil!</p>
     <button onclick="instalarApp()">Instalar App</button>
   </div>
 
   <script>
-    // Code to manage notifications and service worker registration
-    // Add other JavaScript as needed
-  </script>
+    if (window.location.hostname === "salvadorloterias.com") {
+      window.location.replace("https://www.salvadorloterias.com");
+    }
 
+    if (window.top !== window.self) {
+      document.getElementById("notificacao-pod").style.display = "block";
+    }
+
+    function ativarPermissao() {
+      window.open(window.location.href, "_blank");
+    }
+
+    let deferredPrompt;
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js').then(reg => console.log('[SW] Registrado com sucesso!', reg)).catch(err => console.error('[SW] Erro ao registrar:', err));
+    }
+
+    window.addEventListener('beforeinstallprompt', (e) => {
+      e.preventDefault();
+      deferredPrompt = e;
+      if (!localStorage.getItem('appInstalado')) {
+        document.getElementById('install-banner').style.display = 'block';
+      }
+    });
+
+    function instalarApp() {
+      if (deferredPrompt) {
+        deferredPrompt.prompt();
+        deferredPrompt.userChoice.then((choiceResult) => {
+          if (choiceResult.outcome === 'accepted') {
+            console.log('Usuário aceitou o prompt de instalação');
+            localStorage.setItem('appInstalado', 'true');
+            document.getElementById('install-banner').style.display = 'none';
+          } else {
+            console.log('Usuário rejeitou o prompt de instalação');
+          }
+        });
+      }
+    }
+  </script>
 </body>
+
 </html>

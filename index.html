@@ -2,22 +2,50 @@
 <html lang="pt-BR">
 <head>
 
- <script>
-  // Verifica se o navegador suporta notificações
-  if ("Notification" in window) {
-    // Verifica se está fora de um iframe (top-level)
-    if (window.top === window.self) {
-      // Solicita permissão de forma segura
-      Notification.requestPermission().then(function(permission) {
-        console.log("Permissão para notificações:", permission);
-      });
-    } else {
-      console.warn("Notificações não solicitadas: página está dentro de um iframe (bloqueado por segurança).");
-    }
-  } else {
-    console.warn("API de Notificações não suportada neste navegador.");
+<style>
+  #notificacao-pod {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #222;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    font-family: sans-serif;
+    z-index: 9999;
+    display: none;
+  }
+  #notificacao-pod button {
+    margin-top: 10px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+</style>
+
+<div id="notificacao-pod">
+  Ativar notificações?
+  <br />
+  <button onclick="ativarPermissao()">Ativar Permissão</button>
+</div>
+
+<script>
+  // Exibe o pod se estiver dentro de iframe
+  if (window.top !== window.self) {
+    document.getElementById("notificacao-pod").style.display = "block";
+  }
+
+  function ativarPermissao() {
+    // Abre o site fora do iframe (top-level)
+    const link = window.location.href;
+    window.open(link, "_blank");
   }
 </script>
+
 
  <!-- Segurança e boas práticas -->
 <meta charset="UTF-8" />

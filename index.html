@@ -194,19 +194,22 @@
   </div>
 
   <script>
-    if (window.location.hostname === "salvadorloterias.com") {
-      window.location.replace("https://www.salvadorloterias.com");
-    }
+    let deferredPrompt;
 
-    if (window.top !== window.self) {
-      document.getElementById("notificacao-pod").style.display = "block";
-    }
+    // Solicitação de permissão para notificações agora vinculada ao clique do usuário
+    document.getElementById('notificacao-pod').style.display = 'block';
 
     function ativarPermissao() {
-      window.open(window.location.href, "_blank");
+      Notification.requestPermission().then(function (result) {
+        if (result === 'granted') {
+          console.log("Permissão de notificação concedida");
+          document.getElementById('notificacao-pod').style.display = 'none';
+        } else {
+          console.log("Permissão de notificação negada");
+        }
+      });
     }
 
-    let deferredPrompt;
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('service-worker.js').then(reg => console.log('[SW] Registrado com sucesso!', reg)).catch(err => console.error('[SW] Erro ao registrar:', err));
     }
@@ -234,6 +237,7 @@
       }
     }
   </script>
+
 </body>
 
 </html>

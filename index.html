@@ -1,70 +1,12 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<!-- Viewport para dispositivos móveis -->
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta name="referrer" content="no-referrer" />
+  <meta name="permissions-policy" content="camera=(), microphone=(), geolocation=()" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: blob:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; frame-src *; connect-src *;" />
 
-<!-- Fonte base legível para mobile -->
-<style>
-  body {
-    font-size: 16px;
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-  }
-
-  @media (max-width: 480px) {
-    body {
-      font-size: 14px;
-    }
-  }
-
-  
-
-  #notificacao-pod {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background: #222;
-    color: #fff;
-    padding: 15px 20px;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.3);
-    font-family: sans-serif;
-    z-index: 9999;
-    display: none;
-  }
-  #notificacao-pod button {
-    margin-top: 10px;
-    background: #4CAF50;
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 5px;
-    cursor: pointer;
-  }
-</style>
-
-<div id="notificacao-pod">
-  Ativar notificações?
-  <br />
-  <button onclick="ativarPermissao()">Ativar Permissão</button>
-</div>
-
-
-
-
- <!-- Segurança e boas práticas -->
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
-<meta name="referrer" content="no-referrer-when-downgrade" />
-<meta name="referrer" content="no-referrer" />
-<meta name="permissions-policy" content="camera=(), microphone=(), geolocation=()" />
-
-<!-- CSP leve via meta (LIMITADA, mas aceita para conteúdo básico) -->
-<meta http-equiv="Content-Security-Policy" content="default-src 'self' https: data: blob:; script-src 'self' 'unsafe-inline' https:; style-src 'self' 'unsafe-inline' https:; frame-src *; connect-src *;" />
-
-
-  <!-- SEO e redes sociais -->
   <title>Salvador Loterias - A Banca de Apostas Mais Confiável e Rentável</title>
   <meta name="description" content="A Salvador Loterias é a melhor plataforma de apostas com segurança, pagamentos instantâneos via Pix e suporte 24/7. Jogue e multiplique seus ganhos!" />
   <meta name="keywords" content="salvador loterias, banca de apostas, apostas online, pix imediato, suporte 24h, cassino, futebol, esportes, palpites, ganhar dinheiro" />
@@ -100,21 +42,36 @@
       font-family: Arial, sans-serif;
       color: #fff;
     }
+
+    body {
+      font-size: 16px;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 480px) {
+      body {
+        font-size: 14px;
+      }
+    }
+
     .container {
       display: flex;
       flex-direction: column;
       height: 100%;
       width: 100%;
     }
+
     .iframe-container {
       flex: 1;
       width: 100%;
     }
+
     iframe {
       width: 100%;
       height: 100%;
       border: none;
     }
+
     .buttons {
       display: flex;
       flex-wrap: wrap;
@@ -123,6 +80,7 @@
       padding: 5px;
       background: #000;
     }
+
     .button {
       background: #006400;
       color: white;
@@ -137,32 +95,52 @@
       box-shadow: 0 2px 4px rgba(0,0,0,0.3);
       transition: background 0.3s ease;
     }
+
     .button:hover {
       background: #00a000;
     }
+
     .button.banca { background: #000080; }
     .button.banca:hover { background: #0000cd; }
+
     .button.tutorial { background: #673AB7; }
     .button.tutorial:hover { background: #7e57c2; }
+
     .button img {
       width: 20px;
       height: 20px;
       border-radius: 50%;
     }
-  </style>
 
-  <script>
-    if (window.location.hostname === "salvadorloterias.com") {
-      window.location.replace("https://www.salvadorloterias.com");
+    #notificacao-pod {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: #222;
+      color: #fff;
+      padding: 15px 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.3);
+      z-index: 9999;
+      display: none;
     }
-  </script>
+
+    #notificacao-pod button {
+      margin-top: 10px;
+      background: #4CAF50;
+      color: white;
+      border: none;
+      padding: 8px 12px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  
-<div class="container">
+
+  <div class="container">
     <div class="iframe-container">
-      <iframe allow='clipboard-read; clipboard-write' frameborder='0' height='95%' id='embeddedIframe' loading='lazy' sandbox='allow-scripts allow-same-origin' src='https://app.paraisoloterias.com.br/pr/wBHQUmZE' title='Conteúdo interativo do Acertos Club' width='100%'>
-</iframe>
+      <iframe allow='clipboard-read; clipboard-write' frameborder='0' height='95%' id='embeddedIframe' loading='lazy' sandbox='allow-scripts allow-same-origin' src='https://app.paraisoloterias.com.br/pr/wBHQUmZE' title='Conteúdo interativo do Acertos Club' width='100%'></iframe>
     </div>
 
     <div class="buttons">
@@ -176,13 +154,36 @@
     </div>
   </div>
 
-  <!-- Banner de instalação -->
+  <!-- Notificação dentro de iframe -->
+  <div id="notificacao-pod">
+    Ativar notificações?
+    <br />
+    <button onclick="ativarPermissao()">Ativar Permissão</button>
+  </div>
+
+  <!-- Banner de instalação PWA -->
   <div id="install-banner" style="display:none; position: fixed; bottom: 20px; left: 20px; right: 20px; background: #111; color: #fff; padding: 16px; border-radius: 10px; box-shadow: 0 0 10px rgba(0,0,0,0.6); z-index: 9999; text-align: center;">
     <p style="margin: 0 0 10px;">📲 Instale nosso app para acesso mais rápido e fácil!</p>
     <button onclick="instalarApp()" style="background: #4CAF50; color: white; border: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; cursor: pointer;">Instalar App</button>
   </div>
 
   <script>
+    // Redirecionamento para HTTPS correto
+    if (window.location.hostname === "salvadorloterias.com") {
+      window.location.replace("https://www.salvadorloterias.com");
+    }
+
+    // Notificação de iframe
+    if (window.top !== window.self) {
+      document.getElementById("notificacao-pod").style.display = "block";
+    }
+
+    function ativarPermissao() {
+      const link = window.location.href;
+      window.open(link, "_blank");
+    }
+
+    // Instalação do PWA
     let deferredPrompt;
 
     if ('serviceWorker' in navigator) {
@@ -212,21 +213,6 @@
     }
   </script>
 
-
-<script>
-  // Exibe o pod se estiver dentro de iframe
-  if (window.top !== window.self) {
-    document.getElementById("notificacao-pod").style.display = "block";
-  }
-
-  function ativarPermissao() {
-    // Abre o site fora do iframe (top-level)
-    const link = window.location.href;
-    window.open(link, "_blank");
-  }
-</script>
-
-
-  
 </body>
 </html>
+

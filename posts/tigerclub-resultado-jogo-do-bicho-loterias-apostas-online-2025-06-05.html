@@ -41,7 +41,94 @@
   <!-- (Continue com todo o restante do HTML que voc? enviou...) -->
 </head>
 <body>
-  <!-- seu conte?do da p?gina aqui -->
+ <!-- Dados estruturados para SEO local e organiza??o -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "TIGERCLUB",
+    "url": "https://www.TIGERSCLUB.NET",
+    "logo": "https://raw.githubusercontent.com/lucianodelira/TIGERCLUB/refs/heads/main/imagens/logo.webp",
+    "sameAs": [
+      "https://www.instagram.com/tigerclub_app",
+      "https://www.facebook.com/tigerclub_app"
+    ]
+  }
+  </script>
+
+
+  
+  <script defer>
+    (function () {
+      if (window.location.hostname === "TIGERSCLUB.NET") {
+        window.location.replace("https://www.TIGERSCLUB.NET");
+      }
+    })();
+  </script>
+
+
+   <div class="container">
+    <div class="iframe-container">
+      <iframe allow='clipboard-read; clipboard-write' frameborder='0' height='95%' id='embeddedIframe' loading='lazy' sandbox='allow-scripts allow-same-origin' src='https://app.tigersclub.vip/pr/cmDAwXiS' title='JOGOS DO TIGER CLUB' width='100%'>
+</iframe>
+    </div>
+
+
+
+    <div class="buttons">
+      <a class="button" href="https://app.acertos.club/pr/sbrqjugZ">Acertosclub</a>
+      <a class="button banca" href="https://www.feiticeiravip.com.br" target="_blank">
+        <img src="https://raw.githubusercontent.com/lucianodelira/www.acertosclub.com.br/refs/heads/main/icons/minas.webp" alt="?cone" width="20" height="20" />
+        Feiticeira
+      </a>
+      <a class="button tutorial" href="https://www.feiticeiravip.com" target="_blank" rel="noopener noreferrer">
+        ? Tutorial
+      </a>
+      <a class="button" style="background: #004d00;" href="https://wa.me/5583993209139?text=Ol%C3%A1%20Promotor%2C%20preciso%20de%20ajuda%20!" target="_blank" rel="noopener noreferrer">
+        ? Suporte
+      </a>
+    </div>
+  </div>
+
+  <!-- Banner de instala??o -->
+  <div id="install-banner">
+    <p style="margin: 0 0 10px;">? Instale nosso app para acesso mais r?pido e f?cil!</p>
+    <button onclick="instalarApp()" style="background: #4CAF50; color: white; border: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; cursor: pointer;">Instalar App
+ 
+  </button>
+</div>
+
+<script defer>
+  let deferredPrompt;
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+    const banner = document.getElementById('install-banner');
+    if (banner) banner.style.display = 'block';
+  });
+
+  function instalarApp() {
+    if (deferredPrompt) {
+      deferredPrompt.prompt();
+      deferredPrompt.userChoice.then((choiceResult) => {
+        if (choiceResult.outcome === 'accepted') {
+          console.log('Usu?rio aceitou instalar o app');
+        } else {
+          console.log('Usu?rio recusou instalar o app');
+        }
+        deferredPrompt = null;
+        document.getElementById('install-banner').style.display = 'none';
+      });
+    }
+  }
+
+  // Carregamento ass?ncrono do iframe principal
+  window.addEventListener('DOMContentLoaded', () => {
+    document.getElementById('embeddedIframe').src = "https://app.tigersclub.vip/pr/cmDAwXiS";
+  });
+</script>
+
 </body>
 </html>
   

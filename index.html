@@ -61,111 +61,148 @@
   <link rel="shortcut icon" href="https://raw.githubusercontent.com/lucianodelira/TIGERCLUB/refs/heads/main/imagens/logo.webp" type="image/png">
 
   <link rel="manifest" href="manifest.json" />
-  <link rel="canonical" href="https://www.tigersclub.net" />
-
-  <!-- Preload do iframe principal -->
-  <link rel="preload" as="document" href="https://app.tigersclub.vip/pr/cmDAwXiS">
+  <link rel="canonical" href="https://www.superacertos.link" />
 
     <style>
-    /* Estilos gerais para o banner */
-    #app-banner {
-        background-color: #4CAF50;
-        color: white;
-        padding: 20px;
-        text-align: center;
-        position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 50%;
-        height: auto;
-        z-index: 1000;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        animation: slideIn 0.5s ease-out;
-    }
-
-    #app-banner img {
-        width: 120px;
-        height: 120px;
-        margin-bottom: 20px;
-        cursor: pointer;
-        background-color: #FFFAFA;
-        border-radius: 10%;
-    }
-
-    #app-banner .banner-text {
-        font-size: 18px;
-        margin-bottom: 10px;
-    }
-
-    #app-banner a {
-        color: white;
-        text-decoration: none;
-        font-weight: bold;
-        font-size: 20px;
-        background-color: transparent;
-        padding: 10px 20px;
-        border-radius: 5px;
-        transition: background-color 0.3s ease;
-    }
-
-    #app-banner a:hover {
-        background-color: #1e5023;
-    }
-
-    #close-btn {
-        background: none;
-        border: none;
-        color: white;
-        font-size: 30px;
-        cursor: pointer;
-        padding: 5px;
-        position: absolute;
-        top: 10px;
-        right: 10px;
-        transition: transform 0.3s ease;
-    }
-
-    #close-btn:hover {
-        transform: scale(1.2);
-    }
-
-    @keyframes slideIn {
-        from {
-            opacity: 0;
-            transform: translate(-50%, -50%) scale(0.5);
-        }
-        to {
-            opacity: 1;
-            transform: translate(-50%, -50%) scale(1);
-        }
-    }
-
-    @media (max-width: 600px) {
+        /* Estilos gerais para o banner */
         #app-banner {
-            width: 80%;
-            height: auto;
+            background-color: #4CAF50; /* Cor de fundo do banner */
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            top: 50%;  /* Centraliza o banner na vertical */
+            left: 50%;  /* Centraliza o banner na horizontal */
+            transform: translate(-50%, -50%); /* Centraliza o banner completamente */
+            width: 50%;  /* Metade da largura da tela */
+            height: auto; /* Ajuste a altura conforme o conteúdo */
+            z-index: 1000;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;  /* Bordas arredondadas */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            animation: slideIn 0.5s ease-out;
         }
 
+        /* Estilo da imagem do ícone com fundo diferente */
         #app-banner img {
-            width: 100px;
-            height: 100px;
+            width: 120px; /* Aumenta a largura da imagem */
+            height: 120px; /* Aumenta a altura da imagem */
+            margin-bottom: 20px; /* Espaço entre a imagem e o texto */
+            cursor: pointer; /* Aponta o cursor como uma mão, indicando que a imagem é clicável */
+            background-color: 	#FFFAFA; /* Cor de fundo amarela para a imagem */
+            border-radius: 10%; /* Torna a imagem redonda */
         }
 
+        /* Estilo do texto */
         #app-banner .banner-text {
-            font-size: 16px;
-        }
-
-        #app-banner a {
             font-size: 18px;
+            margin-bottom: 10px;
         }
-    }
 
+        /* Estilo do link "Baixe agora" */
+        #app-banner a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px; /* Destaque para o link */
+            background-color: transparent; /* Remover a cor de fundo */
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        #app-banner a:hover {
+            background-color: #1e5023; /* Cor de fundo do botão quando o mouse passa */
+        }
+
+        /* Estilo do botão de fechar */
+        #close-btn {
+            background: none;
+            border: none;
+            color: white;
+            font-size: 30px;
+            cursor: pointer;
+            padding: 5px;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        #close-btn:hover {
+            transform: scale(1.2);
+        }
+
+        /* Animação para o banner */
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translate(-50%, -50%) scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: translate(-50%, -50%) scale(1);
+            }
+        }
+
+        /* Responsividade para telas menores */
+        @media (max-width: 600px) {
+            #app-banner {
+                width: 80%;  /* Ajusta para 80% da largura da tela em dispositivos móveis */
+                height: auto;
+            }
+
+            #app-banner img {
+                width: 100px; /* Ajusta o tamanho da imagem para dispositivos móveis */
+                height: 100px;
+            }
+
+            #app-banner .banner-text {
+                font-size: 16px;
+            }
+
+            #app-banner a {
+                font-size: 18px; /* Ajusta o tamanho da fonte no link para dispositivos móveis */
+            }
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8DBWPE37VV"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-8DBWPE37VV');
+</script>
+
+
+
+  <!-- Preload do iframe principal -->
+  <link rel="preload" as="document" href="https://app.superacertos.club/pr/DiNatQPp">
+
+  <style>
     html, body {
       margin: 0;
       padding: 0;
@@ -175,25 +212,21 @@
       font-family: system-ui, sans-serif;
       color: #fff;
     }
-
     .container {
       display: flex;
       flex-direction: column;
       height: 100%;
       width: 100%;
     }
-
     .iframe-container {
       flex: 1;
       width: 100%;
     }
-
     iframe {
       width: 100%;
       height: 100%;
       border: none;
     }
-
     .buttons {
       display: flex;
       flex-wrap: wrap;
@@ -202,7 +235,6 @@
       padding: 5px;
       background: #000;
     }
-
     .button {
       background: #006400;
       color: white;
@@ -216,21 +248,19 @@
       gap: 6px;
       box-shadow: 0 2px 4px rgba(0,0,0,0.3);
     }
-
     .button.banca {
       background: #000080;
     }
-
     .button.tutorial {
       background: #673AB7;
     }
-
     .button img {
       width: 20px;
       height: 20px;
       border-radius: 50%;
     }
 
+    /* Estilo básico para evitar CLS */
     .logo-container img {
       width: 256px;
       height: 170px;
@@ -239,11 +269,11 @@
     }
 
     .content-container {
-      min-height: 300px;
+      min-height: 300px; /* Reserve espaço visível enquanto carrega */
     }
 
     .button-container {
-      min-height: 60px;
+      min-height: 60px; /* Evita deslocamento ao carregar botões */
     }
 
     #install-banner {
@@ -259,7 +289,7 @@
       box-shadow: 0 0 10px rgba(0,0,0,0.6);
       z-index: 9999;
       text-align: center;
-      min-height: 100px;
+      min-height: 100px; /* Evita deslocamento ao aparecer */
     }
   </style>
 </head>
@@ -270,22 +300,22 @@
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "TIGERCLUB",
-    "url": "https://www.TIGERSCLUB.NET",
-    "logo": "https://raw.githubusercontent.com/lucianodelira/TIGERCLUB/refs/heads/main/imagens/logo.webp",
+    "name": "ACERTOS CLUB",
+    "url": "https://www.superacertos.link",
+    "logo": "https://res.cloudinary.com/dox0ijyes/image/upload/v1746302977/acertos/mina_ca7dtn.webp",
     "sameAs": [
-      "https://www.instagram.com/tigerclub_app",
-      "https://www.facebook.com/tigerclub_app"
+      "https://www.instagram.com/acertos.club",
+      "https://www.facebook.com/acertos.club"
     ]
   }
   </script>
 
 
-  
+
   <script defer>
     (function () {
-      if (window.location.hostname === "TIGERSCLUB.NET") {
-        window.location.replace("https://www.TIGERSCLUB.NET");
+      if (window.location.hostname === "superacertos.link") {
+        window.location.replace("https://www.superacertos.link");
       }
     })();
   </script>
@@ -293,32 +323,26 @@
 
    <div class="container">
     <div class="iframe-container">
-      <iframe allow='clipboard-read; clipboard-write' frameborder='0' height='95%' id='embeddedIframe' loading='lazy' sandbox='allow-scripts allow-same-origin' src='https://app.tigersclub.vip/pr/cmDAwXiS' title='JOGOS DO TIGER CLUB' width='100%'>
+      <iframe
+ src="https://app.superacertos.club/pr/DiNatQPp"
+ width="100%"
+ height="95%"
+ frameborder="0">
 </iframe>
     </div>
 
 
 
     <div class="buttons">
-      <a class="button" href="https://app.acertos.club/pr/sbrqjugZ">Acertosclub</a>
-      <a class="button banca" href="https://www.feiticeiravip.com.br" target="_blank">
-        <img src="https://raw.githubusercontent.com/lucianodelira/www.acertosclub.com.br/refs/heads/main/icons/minas.webp" alt="Ícone" width="20" height="20" />
-        Feiticeira
-      </a>
-      <a class="button tutorial" href="https://www.feiticeiravip.com" target="_blank" rel="noopener noreferrer">
-        📘 Tutorial
-      </a>
-      <a class="button" style="background: #004d00;" href="https://wa.me/5583993209139?text=Ol%C3%A1%20Promotor%2C%20preciso%20de%20ajuda%20!" target="_blank" rel="noopener noreferrer">
-        💬 Suporte
-      </a>
-    </div>
-  </div>
+          
+
+
 
   <!-- Banner de instalação -->
   <div id="install-banner">
     <p style="margin: 0 0 10px;">📲 Instale nosso app para acesso mais rápido e fácil!</p>
     <button onclick="instalarApp()" style="background: #4CAF50; color: white; border: none; padding: 10px 20px; border-radius: 6px; font-weight: bold; cursor: pointer;">Instalar App
- 
+
   </button>
 </div>
 
@@ -349,9 +373,545 @@
 
   // Carregamento assíncrono do iframe principal
   window.addEventListener('DOMContentLoaded', () => {
-    document.getElementById('embeddedIframe').src = "https://app.tigersclub.vip/pr/cmDAwXiS";
+    document.getElementById('embeddedIframe').src = "https://app.superacertos.club/pr/DiNatQPp";
   });
 </script>
 
+
+
+
+
+
+
+
+<!-- ========================================= -->
+
+<!-- BANNER WHATSAPP - GRUPO DE PALPITES -->
+
+<!-- ========================================= -->
+
+<div id="whats-banner">
+
+  <!-- BOTÃO FECHAR -->
+
+<button
+onclick="fecharWhatsBanner()"
+class="whats-fechar"
+aria-label="Fechar banner"
+
+>
+
+
+×
+
+
+  </button>
+
+  <!-- ÍCONE WHATSAPP -->
+
+  <div class="whats-icon-top">
+    <img
+      src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+      alt="WhatsApp"
+    >
+  </div>
+
+  <!-- TÍTULO -->
+
+  <h2>🔥 ENTRE NO GRUPO DE PALPITES!</h2>
+
+  <p>
+    Receba palpites, informações e novidades<br>
+    diretamente no seu WhatsApp.
+  </p>
+
+  <!-- BOTÃO WHATSAPP -->
+
+<a
+href="https://chat.whatsapp.com/BiiU4p1jYXIFUF1ybsZQr5"
+target="_blank"
+rel="noopener noreferrer"
+onclick="fecharWhatsBanner()"
+class="whats-button"
+
+>
+
+```
+<img
+  src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+  alt="WhatsApp"
+>
+
+<span>
+  PARTICIPAR DO GRUPO
+</span>
+```
+
+  </a>
+
+  <!-- RODAPÉ -->
+
+  <div class="whats-rodape">
+    ✅ Grupo gratuito • Entre agora!
+  </div>
+
+</div>
+
+<style>
+
+/* ========================================= */
+/* BANNER */
+/* ========================================= */
+
+#whats-banner {
+
+  position: fixed;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 380px;
+  max-width: calc(100% - 30px);
+
+  padding: 35px 25px 28px;
+
+  background:
+    radial-gradient(
+      circle at top,
+      #123c28 0%,
+      #111 45%,
+      #080808 100%
+    );
+
+  border: 2px solid #25D366;
+
+  border-radius: 22px;
+
+  text-align: center;
+
+  font-family: Arial, sans-serif;
+
+  z-index: 999999;
+
+  box-shadow:
+    0 0 15px rgba(37,211,102,.7),
+    0 0 40px rgba(37,211,102,.4),
+    0 15px 50px rgba(0,0,0,.8);
+
+  animation:
+    bannerEntrada .5s ease,
+    bannerBrilho 2s infinite;
+
+}
+
+
+/* ========================================= */
+/* ANIMAÇÃO DE ENTRADA */
+/* ========================================= */
+
+@keyframes bannerEntrada {
+
+  from {
+
+    opacity: 0;
+
+    transform:
+      translate(-50%, -45%)
+      scale(.8);
+
+  }
+
+  to {
+
+    opacity: 1;
+
+    transform:
+      translate(-50%, -50%)
+      scale(1);
+
+  }
+
+}
+
+
+/* ========================================= */
+/* ANIMAÇÃO DE BRILHO */
+/* ========================================= */
+
+@keyframes bannerBrilho {
+
+  0%, 100% {
+
+    box-shadow:
+      0 0 15px rgba(37,211,102,.6),
+      0 0 40px rgba(37,211,102,.3),
+      0 15px 50px rgba(0,0,0,.8);
+
+  }
+
+  50% {
+
+    box-shadow:
+      0 0 25px rgba(37,211,102,1),
+      0 0 60px rgba(37,211,102,.55),
+      0 15px 50px rgba(0,0,0,.8);
+
+  }
+
+}
+
+
+/* ========================================= */
+/* BOTÃO FECHAR */
+/* ========================================= */
+
+.whats-fechar {
+
+  position: absolute;
+
+  top: 10px;
+  right: 10px;
+
+  width: 35px;
+  height: 35px;
+
+  border: 0;
+
+  border-radius: 50%;
+
+  background: #ff1744;
+
+  color: #fff;
+
+  font-size: 25px;
+
+  font-weight: bold;
+
+  line-height: 35px;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 0 12px rgba(255,23,68,.6);
+
+  transition: .2s;
+
+}
+
+.whats-fechar:hover {
+
+  transform: scale(1.12);
+
+  background: #ff0033;
+
+}
+
+
+/* ========================================= */
+/* ÍCONE SUPERIOR */
+/* ========================================= */
+
+.whats-icon-top {
+
+  width: 75px;
+  height: 75px;
+
+  margin: 0 auto 12px;
+
+  border-radius: 50%;
+
+  background: #25D366;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  box-shadow:
+    0 0 15px #25D366,
+    0 0 35px rgba(37,211,102,.6);
+
+  animation: iconPulse 1.5s infinite;
+
+}
+
+
+.whats-icon-top img {
+
+  width: 48px;
+  height: 48px;
+
+}
+
+
+/* ========================================= */
+/* PULSO DO ÍCONE */
+/* ========================================= */
+
+@keyframes iconPulse {
+
+  0%, 100% {
+
+    transform: scale(1);
+
+  }
+
+  50% {
+
+    transform: scale(1.08);
+
+  }
+
+}
+
+
+/* ========================================= */
+/* TÍTULO */
+/* ========================================= */
+
+#whats-banner h2 {
+
+  margin: 8px 0 10px;
+
+  color: #25D366;
+
+  font-size: 23px;
+
+  font-weight: 900;
+
+  font-family: Arial, sans-serif;
+
+  text-shadow:
+    0 0 8px rgba(37,211,102,.8);
+
+}
+
+
+/* ========================================= */
+/* TEXTO */
+/* ========================================= */
+
+#whats-banner p {
+
+  margin: 0;
+
+  color: #ddd;
+
+  font-size: 14px;
+
+  line-height: 1.5;
+
+}
+
+
+/* ========================================= */
+/* BOTÃO WHATSAPP */
+/* ========================================= */
+
+.whats-button {
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 10px;
+
+  width: 100%;
+
+  box-sizing: border-box;
+
+  margin-top: 20px;
+
+  padding: 16px 15px;
+
+  background:
+    linear-gradient(
+      45deg,
+      #00c853,
+      #25D366,
+      #00e676
+    );
+
+  color: #fff;
+
+  border-radius: 14px;
+
+  text-decoration: none;
+
+  font-size: 17px;
+
+  font-weight: 900;
+
+  letter-spacing: .3px;
+
+  box-shadow:
+    0 5px 20px rgba(37,211,102,.5);
+
+  animation: buttonPulse 1.8s infinite;
+
+  transition: .2s;
+
+}
+
+
+.whats-button img {
+
+  width: 30px;
+  height: 30px;
+
+}
+
+
+.whats-button:hover {
+
+  transform: scale(1.04);
+
+  box-shadow:
+    0 0 20px rgba(37,211,102,1),
+    0 0 40px rgba(37,211,102,.5);
+
+}
+
+
+/* ========================================= */
+/* PULSO DO BOTÃO */
+/* ========================================= */
+
+@keyframes buttonPulse {
+
+  0%, 100% {
+
+    transform: scale(1);
+
+  }
+
+  50% {
+
+    transform: scale(1.025);
+
+  }
+
+}
+
+
+/* ========================================= */
+/* RODAPÉ */
+/* ========================================= */
+
+.whats-rodape {
+
+  margin-top: 14px;
+
+  color: #25D366;
+
+  font-size: 12px;
+
+  font-weight: bold;
+
+}
+
+
+/* ========================================= */
+/* CELULAR */
+/* ========================================= */
+
+@media (max-width: 480px) {
+
+  #whats-banner {
+
+    width: 330px;
+
+    padding: 30px 20px 23px;
+
+  }
+
+  #whats-banner h2 {
+
+    font-size: 20px;
+
+  }
+
+  #whats-banner p {
+
+    font-size: 13px;
+
+  }
+
+  .whats-button {
+
+    font-size: 15px;
+
+    padding: 15px 10px;
+
+  }
+
+}
+
+
+/* ========================================= */
+/* ANIMAÇÃO DE SAÍDA */
+/* ========================================= */
+
+.whats-banner-fechando {
+
+  opacity: 0 !important;
+
+  transform:
+    translate(-50%, -50%)
+    scale(.8) !important;
+
+  transition: .25s ease;
+
+}
+
+</style>
+
+<script>
+
+/* ========================================= */
+/* FECHAR BANNER */
+/* ========================================= */
+
+function fecharWhatsBanner() {
+
+  const banner =
+    document.getElementById("whats-banner");
+
+  if (!banner) return;
+
+  banner.classList.add(
+    "whats-banner-fechando"
+  );
+
+  setTimeout(function() {
+
+    banner.remove();
+
+  }, 250);
+
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+    
+
+        
+    
+    
 </body>
 </html>
